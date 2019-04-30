@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/iv-dashboard/static/css/main.584f321a.chunk.css",
+    "main.js": "/iv-dashboard/static/js/main.e31657ee.chunk.js",
+    "main.js.map": "/iv-dashboard/static/js/main.e31657ee.chunk.js.map",
+    "runtime~main.js": "/iv-dashboard/static/js/runtime~main.9cedd0b2.js",
+    "runtime~main.js.map": "/iv-dashboard/static/js/runtime~main.9cedd0b2.js.map",
+    "static/js/2.b41502e9.chunk.js": "/iv-dashboard/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/iv-dashboard/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/iv-dashboard/index.html",
+    "precache-manifest.f0eeb471f5bd10e8cbaad82289d1c675.js": "/iv-dashboard/precache-manifest.f0eeb471f5bd10e8cbaad82289d1c675.js",
+    "service-worker.js": "/iv-dashboard/service-worker.js",
+    "static/css/main.584f321a.chunk.css.map": "/iv-dashboard/static/css/main.584f321a.chunk.css.map",
+    "static/media/logo.svg": "/iv-dashboard/static/media/logo.5d5d9eef.svg"
+  }
+}
