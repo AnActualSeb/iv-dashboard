@@ -3,6 +3,8 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "../styles/drugCard.css";
 
+//still needs to reaspond to specific drug information
+
 class DrugCard extends Component {
   getColor() {}
 
