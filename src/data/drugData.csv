@@ -1,0 +1,12 @@
+Brain,Pump,Drug Name,Drug Color Code,Rate (mL/hr),Dosage,Dilution,Total Volume,Method
+1,A,Milrinone,E6C8ED,0.10,0.05 mcg/kg/min,0.2 mg/mL,50mL,
+1,B,Basic Infusion,,120,,,60mL,Syringe
+1,C,EPINEPHrine,E6C8ED,0.3,0.05 mcg/kg/min,0.032 mg/mL,50mL,
+1,D,Vasopressin,E6C8ED,2.72,20 milliunits/kg/hr,0.025 units/mL,50mL,
+2,A,Basic Infusion,,5,N/A,,60mL,Syringe
+2,B,Morphine,8ACAFF,6.8,40 mcg/kg/hr,0.2 mg/mL,50mL,
+2,C,Dexmedetomidine,8ACAFF,0.4,0.5 mcg/kg/hr,4 mcg/mL,50mL,
+2,D,Tranexamic Acid,,0.9,5 mg/kg/hr,20 mg/mL,50mL,
+3,A,Alprostadil,,0.3,0.05 mcg/kg/hr,0.5 mcg/mL,50mL,
+3,B,Basic Infusion,,10,N/A,,150mL,VTBI Bag
+3,C,Inralipid,,3,N/A,,50mL,VTBI Bag

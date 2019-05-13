@@ -1,4 +1,21 @@
-.drugCard{
+.card > .card-title {
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 75%;
+    align-self: center;
+}
+
+.cardContainer > a {
+    color: black;
+}
+
+.cardContainer > a:hover {
+    text-decoration: none;
+    color: black;
+} 
+
+
+/* .drugCard{
     border: 4px solid black;
     width: 496px;
     height: 160px;
@@ -31,6 +48,12 @@
     font-size: 30px;
 }
 
+.rate > .b{
+    margin-left: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
 .dosage {
     margin-right: auto;
     font-family: 'Roboto', sans-serif;
@@ -56,4 +79,4 @@
 .cardContainer > a:hover {
     text-decoration: none;
     color: black;
-}
+} */
