@@ -44,7 +44,7 @@
 .status{
     /* display: flex; */
     border: 1px solid green;
-    background: #67FF64;
+    background: rgb(130, 214, 130);
     border-radius: 15px;
     width: 120px;
     position: absolute;
