@@ -1,8 +1,21 @@
 .card > .card-title {
+    display: table;
     border: solid 1px black;
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
+    border-top: none;
     width: 75%;
     align-self: center;
+    margin-bottom: 0;
+    height: 51px;
+    /* line-height: 51px; */
+    justify-content: center;
+    text-align: center;
+}
+.card-title p {
+    margin: 0px;
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center; 
 }
 
 .cardContainer > a {
@@ -14,69 +27,49 @@
     color: black;
 } 
 
-
-/* .drugCard{
-    border: 4px solid black;
-    width: 496px;
-    height: 160px;
-    border-radius: 20px;
+.card {
+    border: solid 4px green;
+    margin: 5px;
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    padding: 0 10px 10px 10px;
+    box-shadow: 3px 3px #cfcdcd;
 }
 
-.drugLabel{
-    background: #FFEBCC;
-    border-radius: 0 0px 20px 20px;
-    padding: 5px;
-    height: 55px;
-    width: 285px;
-    justify-content: center;
-    text-align: center;
-    align-self: center;
-}
-
-.content{
+.card-body {
     display: flex;
-    flex-direction: row;
-}
-
- .rate{
-    margin-left: auto;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-}
-
-.rate > .b{
-    margin-left: auto;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-}
-
-.dosage {
-    margin-right: auto;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
 }
 
 .status{
-    display: flex;
+    /* display: flex; */
     border: 1px solid green;
     background: #67FF64;
     border-radius: 15px;
     width: 120px;
-    height: 38px;
-    justify-content: center;
-    text-align: center;
+    position: absolute;
+    bottom: 0;
     align-self: center;
+    margin-bottom: 10px;
 }
 
-.cardContainer > a {
-    color: black;
+.info{
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    margin-bottom: 50px;
 }
 
-.cardContainer > a:hover {
-    text-decoration: none;
-    color: black;
-} */
+.dosage {
+    margin: 0px 0px 0px 25px;
+}
+
+.rate {
+    margin-right: auto;
+    margin: 0px 25px 0px 0px;
+}
+
+h5{
+    margin: 0;
+    font-size: 15px;
+}
