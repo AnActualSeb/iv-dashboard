@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 import "../styles/drugCard.css";
 
 //still needs to reaspond to specific drug information
@@ -9,47 +8,50 @@ import "../styles/drugCard.css";
 class DrugCard extends Component {
 
     getDosage() {
-        if (this.props.dosage !== "") {
+        if (this.props.dosage !== null) {
             return <strong>{this.props.dosage}</strong>
+        } else {
+            return this.props.dosage
         }
     }
 
     getRate() {
-        if (this.props.dosage === "") {
+        if (this.props.dosage === null) {
             return <strong>{this.props.rate}</strong>
+        } else {
+            return this.props.rate
         }
     }
 
     render() {
         return (
             <div className='cardContainer'>
-                {/* <Link to={{
-                    pathname: "/drugScreen",
-                    search: "?",
-                    state: this.props
-                }}> */}
-                {console.log("#" + this.props.color)}
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '18rem', height: '11rem' }}>
                     <Card.Title style={{ backgroundColor: "#" + this.props.color }}>
-                        {this.props.drugName}
+                        <p>{this.props.drugName}</p>
                     </Card.Title>
                     <Card.Body>
-                        <div className='dosage'>
-                            {/* {this.getDosage()} */}
-                            {this.props.dosage}
-                            <h5>
-                                {this.props.dosageUnit}
-                            </h5>
+                        <div className='info'>
+                            <div className='dosage'>
+                                {this.getDosage()}
+                                {/* {this.props.dosage} */}
+                                <h5>
+                                    {this.props.dosageUnit}
+                                </h5>
+                            </div>
+
+                            <div className='rate'>
+                                {this.getRate()}
+                                {/* {this.props.rate} */}
+                                <h5>
+                                    {this.props.rateUnit}
+                                </h5>
+                            </div>
                         </div>
 
-                        <div className='rate'>
-                            {/* {this.getRate()} */}
-                            {this.props.rate}
-                            <h5>
-                                {this.props.rateUnit}
-                            </h5>
-                        </div>
+                        <div className='status'>Active</div>
                     </Card.Body>
+
                 </Card>
 
                 {/* <div className="drugCard">
@@ -68,7 +70,6 @@ class DrugCard extends Component {
                         </div>
                         <div className='status'>Active</div>
                     </div> */}
-                {/* </Link> */}
             </div>
         );
     }
