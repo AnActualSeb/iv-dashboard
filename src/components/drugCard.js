@@ -53,23 +53,6 @@ class DrugCard extends Component {
                     </Card.Body>
 
                 </Card>
-
-                {/* <div className="drugCard">
-                        <div className="drugLabel">
-                            <b>Milrinone</b>
-                        </div>
-                        <div className="content">
-                            <div className="dosage">
-                                <b>0.05</b>
-                                <p>mcg/kg/hr</p>
-                            </div>
-                            <div className="rate">
-                                <b>0.10</b>
-                                <p>mL/hr</p>
-                            </div>
-                        </div>
-                        <div className='status'>Active</div>
-                    </div> */}
             </div>
         );
     }
