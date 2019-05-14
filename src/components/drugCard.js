@@ -26,7 +26,7 @@ class DrugCard extends Component {
     render() {
         return (
             <div className='cardContainer'>
-                <Card style={{ width: '18rem', height: '11rem' }}>
+                <Card style={{ width: '15rem', height: '11rem' }}>
                     <Card.Title style={{ backgroundColor: "#" + this.props.color }}>
                         <p>{this.props.drugName}</p>
                     </Card.Title>
