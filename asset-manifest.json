@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/iv-dashboard/static/css/main.a4067973.chunk.css",
-    "main.js": "/iv-dashboard/static/js/main.a8484c80.chunk.js",
-    "main.js.map": "/iv-dashboard/static/js/main.a8484c80.chunk.js.map",
+    "main.css": "/iv-dashboard/static/css/main.ee70a3e8.chunk.css",
+    "main.js": "/iv-dashboard/static/js/main.04c4025f.chunk.js",
+    "main.js.map": "/iv-dashboard/static/js/main.04c4025f.chunk.js.map",
     "runtime~main.js": "/iv-dashboard/static/js/runtime~main.9cedd0b2.js",
     "runtime~main.js.map": "/iv-dashboard/static/js/runtime~main.9cedd0b2.js.map",
-    "static/js/2.56e74c8f.chunk.js": "/iv-dashboard/static/js/2.56e74c8f.chunk.js",
-    "static/js/2.56e74c8f.chunk.js.map": "/iv-dashboard/static/js/2.56e74c8f.chunk.js.map",
+    "static/js/2.896e0962.chunk.js": "/iv-dashboard/static/js/2.896e0962.chunk.js",
+    "static/js/2.896e0962.chunk.js.map": "/iv-dashboard/static/js/2.896e0962.chunk.js.map",
     "index.html": "/iv-dashboard/index.html",
-    "precache-manifest.09b55188b2c7a0b27d0f4aa949cbeb98.js": "/iv-dashboard/precache-manifest.09b55188b2c7a0b27d0f4aa949cbeb98.js",
+    "precache-manifest.3bdac9bfdf9da5956edd1dba86b77fc1.js": "/iv-dashboard/precache-manifest.3bdac9bfdf9da5956edd1dba86b77fc1.js",
     "service-worker.js": "/iv-dashboard/service-worker.js",
-    "static/css/main.a4067973.chunk.css.map": "/iv-dashboard/static/css/main.a4067973.chunk.css.map"
+    "static/css/main.ee70a3e8.chunk.css.map": "/iv-dashboard/static/css/main.ee70a3e8.chunk.css.map"
   }
 }
