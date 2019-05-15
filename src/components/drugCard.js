@@ -21,28 +21,36 @@ class DrugCard extends Component {
     } else {
       return this.props.rate;
     }
-  }
+    render() {
+        return (
+            <div className='cardContainer'>
+                <Card style={{ width: '15rem', height: '11rem' }}>
+                    <Card.Title style={{ backgroundColor: "#" + this.props.color }}>
+                        <p>{this.props.drugName}</p>
+                    </Card.Title>
+                    <Card.Body>
+                        <div className='info'>
+                            <div className='dosage'>
+                                {this.getDosage()}
+                                {/* {this.props.dosage} */}
+                                <h5>
+                                    {this.props.dosageUnit}
+                                </h5>
+                            </div>
 
-  render() {
-    return (
-      <div className="cardContainer">
-        <Card style={{ width: "18rem", height: "11rem" }}>
-          <Card.Title style={{ backgroundColor: "#" + this.props.color }}>
-            <p>{this.props.drugName}</p>
-          </Card.Title>
-          <Card.Body>
-            <div className="info">
-              <div className="dosage">
-                {this.getDosage()}
-                {/* {this.props.dosage} */}
-                <h5>{this.props.dosageUnit}</h5>
-              </div>
+                            <div className='rate'>
+                                {this.getRate()}
+                                {/* {this.props.rate} */}
+                                <h5>
+                                    {this.props.rateUnit}
+                                </h5>
+                            </div>
+                        </div>
 
-              <div className="rate">
-                {this.getRate()}
-                {/* {this.props.rate} */}
-                <h5>{this.props.rateUnit}</h5>
-              </div>
+                        <div className='status'>Active</div>
+                    </Card.Body>
+
+                </Card>
             </div>
 
             <div className="status">Active</div>
