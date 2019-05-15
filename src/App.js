@@ -17,7 +17,6 @@ function App() {
           {/* <TopHeader /> */}
 
           <Route exact path="/" component={Dashboard} />
-          <Route path="/basicLayout" component={BasicLayout} />
         </div>
       </BrowserRouter>
     </div>
