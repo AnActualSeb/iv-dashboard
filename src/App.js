@@ -2,8 +2,6 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
 import DrugScreen from "./views/DrugScreen";
-import BasicLayout from "./components/BasicLayout";
-// import TopHeader from '../components/topHeader';
 
 import "./App.css";
 
