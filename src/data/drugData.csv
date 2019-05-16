@@ -1,5 +1,5 @@
 Brain,Pump,Drug Name,Drug Color Code,Rate (mL/hr),Dosage,Dilution,Total Volume,Method
-1,A,Milrinone,E6C8ED,0.10,0.05 mcg/kg/min,0.2 mg/mL,50mL,
+1,A,Milrinone,E6C8ED,0.1,0.05 mcg/kg/min,0.2 mg/mL,50mL,
 1,B,Basic Infusion,,120,,,60mL,Syringe
 1,C,EPINEPHrine,E6C8ED,0.3,0.05 mcg/kg/min,0.032 mg/mL,50mL,
 1,D,Vasopressin,E6C8ED,2.72,20 milliunits/kg/hr,0.025 units/mL,50mL,
