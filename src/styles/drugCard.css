@@ -18,15 +18,6 @@
     text-align: center; 
 }
 
-.cardContainer > a {
-    color: black;
-}
-
-.cardContainer > a:hover {
-    text-decoration: none;
-    color: black;
-} 
-
 .card {
     border: solid 4px green;
     margin: 5px;
