@@ -142,7 +142,7 @@
     {
         "Brain": 3,
         "Pump": "C",
-        "Drug Name": "Basic Infusion (Inralipid)",
+        "Drug Name": "Basic Infusion (Intralipid)",
         "Drug Color Code": "",
         "Rate": 3,
         "Rate Unit": "mL/hr",
