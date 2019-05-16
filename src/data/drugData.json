@@ -87,7 +87,7 @@
     "Rate": 2.7,
     "Rate Unit": "mL/hr",
     "Dosage": 40,
-    "Dosage Rate": "",
+    "Dosage Rate": "mcg/kg/hr",
     "Dilution": 200,
     "Dilution Rate": "mcg/mL",
     "Starting Volume": 50,
