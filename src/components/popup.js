@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class Popup extends Component {
-    state = {}
-    render() {
-        return (  );
-    }
-}
+// class Popup extends Component {
+//     state = {}
+//     render() {
+//         return (  );
+//     }
+// }
 
-export default Popup;
+// export default Popup;
