@@ -21,6 +21,12 @@ class Dashboard extends Component {
                     rateUnit={data[i]["Rate Unit"]}
                     location={data[i]["Brain"] + data[i]["Pump"]}
                     color={data[i]["Drug Color Code"]}
+                    dilution={data[i]["Dilusion"]}
+                    dilutionRate={data[i]["Dilusion Rate"]}
+                    startingVolume={data[i]["Starting Volume"]}
+                    startingVolumeUnit={data[i]["Starting Volume Unit"]}
+                    vtbi={data[i]["VTBI"]}
+                    vtbiUnit={data[i]["VTBI Unit"]}
                     method={data[i]["Method"]} />)
             if ((counter % 4) === 0) {
                 arr.push(<img className='pumpBrain' src={pumpBrain} alt="Pump Brain"></img>)
