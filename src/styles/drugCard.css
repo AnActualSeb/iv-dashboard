@@ -86,4 +86,5 @@ p {
 
 .vtbi > p {
     font-size: 12px;
+    margin-bottom: -3px;
 }
