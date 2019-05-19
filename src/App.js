@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
 import DrugScreen from "./views/DrugScreen";
+import Timer from "./components/Timer";
 
 import "./App.css";
 
@@ -14,7 +15,8 @@ function App() {
 
           {/* <TopHeader /> */}
 
-          <Route exact path="/" component={Dashboard} />
+          {/* <Route exact path="/" component={Dashboard} /> */}
+          <Route exact path="/" render={props => <Timer startVolume="100" />} />
         </div>
       </BrowserRouter>
     </div>
