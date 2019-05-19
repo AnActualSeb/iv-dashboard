@@ -11,7 +11,7 @@ class DrugCard extends Component {
         if (this.props.dosage !== null) {
             return <strong>{this.props.dosage}</strong>
         } else {
-            return this.props.dosage
+            return <div style={{ width: "35px" }}></div>
         }
     }
 
@@ -19,7 +19,7 @@ class DrugCard extends Component {
         if (this.props.dosage === null) {
             return <strong>{this.props.rate}</strong>
         } else {
-            return this.props.rate
+            return <p>{this.props.rate}</p>
         }
     }
 
@@ -36,6 +36,14 @@ class DrugCard extends Component {
                                 {this.getDosage()}
                                 <h5>
                                     {this.props.dosageUnit}
+                                </h5>
+                            </div>
+
+                            <div className='vtbi'>
+                                <p>VTBI</p>
+                                {this.props.vtbi}
+                                <h5>
+                                    {this.props.vtbiUnit}
                                 </h5>
                             </div>
 

@@ -54,3 +54,11 @@
     justify-content: center;
     color: white;
 }
+
+.topHeader > button{
+    height: 30px;
+}
+
+.topHeader > .btn-light{
+    padding: 0px 10px 0px 10px;
+}
