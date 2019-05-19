@@ -25,7 +25,7 @@ class Timer extends Component {
     this.myInterval = setInterval(() => {
       if (this.state.volume > 0) {
         this.setState(prevState => ({
-          volume: prevState.volume - 5
+          volume: prevState.volume - 1
         }));
       } else {
         clearInterval(this.myInterval);
