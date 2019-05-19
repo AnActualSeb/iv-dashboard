@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from "react-bootstrap/Button";
 import '../styles/topHeader.css';
 
 class TopHeader extends Component {
@@ -25,6 +26,9 @@ class TopHeader extends Component {
                     <strong>Mode:</strong>
                     <p>AN</p>
                 </div>
+
+                <Button variant="light"><strong>Handoff</strong></Button>
+
             </div>
         );
     }

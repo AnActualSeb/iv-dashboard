@@ -7,7 +7,6 @@
     align-self: center;
     margin-bottom: 0;
     height: 51px;
-    /* line-height: 51px; */
     justify-content: center;
     text-align: center;
 }
@@ -52,15 +51,40 @@
 }
 
 .dosage {
-    margin: 0px 0px 0px 25px;
+    margin: 0px 0px 0px 15px;
 }
 
 .rate {
     margin-right: auto;
-    margin: 0px 25px 0px 0px;
+    margin: 0px 15px 0px 0px;
+}
+
+.rate > p {
+    font-size: 30px;
+}
+
+.dosage > strong {
+    font-size: 30px;
 }
 
 h5{
     margin: 0;
+    font-size: 13px;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.vtbi {
     font-size: 15px;
+    align-self: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vtbi > p {
+    font-size: 12px;
+    margin-bottom: -3px;
 }
