@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
 import Swipeable from "react-swipy";
-// import DrugCard from "../components/drugCard";
-import Card from "./components/Card";
-import Button from "./components/Button";
+import Card from "../components/Card";
+import Button from "../components/Button";
+import TopHeader from "../components/topHeader.js";
 
 const appStyles = {
   height: "100%",
@@ -23,7 +22,7 @@ const actionsStyles = {
   marginTop: 12
 };
 
-class App extends Component {
+class Handoff extends Component {
   state = {
     cards: ["First", "Second", "Third"]
   };
@@ -60,4 +59,4 @@ class App extends Component {
   }
 }
 
-render(<App />, document.getElementById("root"));
+export default Handoff;
