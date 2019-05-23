@@ -3,12 +3,13 @@ import DrugCard from "../components/drugCard";
 import "../styles/dashboard.css";
 import data from "../data/drugData.json";
 import pumpBrain from '../images/pumpBrain.png';
-import TopHeader from "../components/topHeader.js";
+import TopHeader from "../components/TopHeader.js";
 
 class Dashboard extends Component {
     makeCards() {
         var arr = []
-        var counter = 2;
+        let counter = 2;
+        let counter2 = 100;
         for (var i = 0; i < data.length; i++) {
             counter++;
             arr.push(
@@ -29,7 +30,8 @@ class Dashboard extends Component {
                     vtbiUnit={data[i]["VTBI Unit"]}
                     method={data[i]["Method"]} />)
             if ((counter % 4) === 0) {
-                arr.push(<img className='pumpBrain' src={pumpBrain} alt="Pump Brain"></img>)
+                arr.push(<img className='pumpBrain' src={pumpBrain} alt="Pump Brain" key={counter2} />)
+                counter2++;
             }
         }
         return arr;
