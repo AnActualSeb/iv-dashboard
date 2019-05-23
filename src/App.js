@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route exact path="/" component={Dashboard} />
-          <Route path="/handoff" component={Handoff} />
+          {/* <Route exact path="/" component={Dashboard} /> */}
+          {/* <Route path="/handoff" component={Handoff} /> */}
 
-          {/* <Route exact path="/" render={props => <Timer startVolume="100" />} /> */}
+          <Route exact path="/" render={props => <Timer startVolume="150" unit="mL" />} />
         </Switch>
       </BrowserRouter>
     </div>

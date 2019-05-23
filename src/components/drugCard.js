@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import "../styles/drugCard.css";
 
-//still needs to reaspond to specific drug information
-//Whole div is link, it should just be the drug card alone
+// still needs to respond to specific drug information
+// whole div is link, it should just be the drug card alone
 
 class DrugCard extends Component {
 

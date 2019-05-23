@@ -1,26 +1,36 @@
+/* This component is a "countdown" timer that will receive values from drugData.json
+   and simulate the passing of time and decrease the initial volume of a drug based on
+   the infusion rate (defined by sequential values in drugData.json)*/
+
+// Current State: 
+// Future State:
+
 import React, { Component } from "react";
 
 class Timer extends Component {
   constructor(props) {
     super(props);
+    // setting initial state as a default volume value for a drug
     this.state = {
-      volume: 50
+      volume: 50,
+      unit: "mL"
     };
   }
 
   render() {
-    const { volume } = this.state;
+    const { volume, unit } = this.state;
     return (
       <div>
-        <h1>Current Volume: {volume}</h1>
+        <p>Current Volume: {volume} {unit}</p>
       </div>
     );
   }
 
   componentDidMount() {
-    const { startVolume } = this.props;
+    const { startVolume, volumeUnit } = this.props;
     this.setState({
-      volume: startVolume
+      volume: startVolume,
+      unit: volumeUnit
     });
     this.myInterval = setInterval(() => {
       if (this.state.volume > 0) {
@@ -30,7 +40,7 @@ class Timer extends Component {
       } else {
         clearInterval(this.myInterval);
       }
-    }, 50);
+    }, 1500);
   }
 
   componentWillUnmount() {
