@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from "react-bootstrap/Button";
 import "../styles/drugCard.css";
 
 //still needs to reaspond to specific drug information
@@ -57,7 +58,6 @@ class DrugCard extends Component {
 
                         <div className='status'>Active</div>
                     </Card.Body>
-
                 </Card>
             </div>
         );
