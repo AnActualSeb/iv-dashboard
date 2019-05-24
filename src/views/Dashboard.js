@@ -2,17 +2,21 @@ import React, { Component } from "react";
 import DrugCard from "../components/drugCard";
 import "../styles/dashboard.css";
 import data from "../data/drugData.json";
-import pumpBrain from "../images/pumpBrain.png";
-import TopHeader from "../components/topHeader.js";
+import pumpBrain from '../images/pumpBrain.png';
+import TopHeader from "../components/TopHeader.js";
 
 class Dashboard extends Component {
+
+  state = {}
+
   makeCards() {
-    var arr = [];
-    var counter = 2;
+    var arr = []
+    let counter = 2;
+    let counter2 = 100;
     for (var i = 0; i < data.length; i++) {
       counter++;
       arr.push(
-        <DrugCard
+        < DrugCard
           key={i}
           drugName={data[i]["Drug Name"]}
           dosage={data[i]["Dosage"]}
@@ -27,22 +31,19 @@ class Dashboard extends Component {
           startingVolumeUnit={data[i]["Starting Volume Unit"]}
           vtbi={data[i]["VTBI"]}
           vtbiUnit={data[i]["VTBI Unit"]}
-          method={data[i]["Method"]}
-        />
-      );
-      if (counter % 4 === 0) {
-        arr.push(
-          <img className="pumpBrain" src={pumpBrain} alt="Pump Brain" />
-        );
+          method={data[i]["Method"]} />)
+
+      if ((counter % 4) === 0) {
+        arr.push(<img className='pumpBrain' src={pumpBrain} alt="Pump Brain" key={counter2} />)
+        counter2++;
       }
     }
     return arr;
   }
 
-  state = {};
   render() {
     return (
-      <div className="dashboard">
+      <div className='dashboard'>
         <TopHeader />
         {this.makeCards()}
       </div>
