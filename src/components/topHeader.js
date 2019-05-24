@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import ChainedModal from "./chainedModal";
 import data from "../data/drugData.json";
 import Modal from "react-bootstrap/Modal";
+import Table from "react-bootstrap/Table";
 import '../styles/topHeader.css';
 
 class TopHeader extends Component {
@@ -10,12 +11,57 @@ class TopHeader extends Component {
         super(props);
         this.state = {
             modalShow: false,
-            visible: false
+            visible: false,
+            varified: false
         };
     }
 
-    resetVisible() {
-        this.setState({ visible: false })
+    getDosage(value, unit) {
+        if (value !== null) {
+            return (
+                <td className="dosage">
+                    <h4>Dosage</h4>
+                    <p>{value}</p>
+                    <h5>{unit}</h5>
+                </td>
+            )
+        } else {
+            return null
+        }
+    }
+
+    getDilution(dilution, unit) {
+        if (dilution !== null) {
+            return (
+                <td>
+                    <h4>Dilution</h4>
+                    <p>{dilution}</p>
+                    <h5>{unit}</h5>
+                </td>
+            )
+        } else {
+            return null
+        }
+    }
+
+    getRate(dosage, rate, unit) {
+        if (dosage === null) {
+            return (
+                <td className="rate">
+                    <h4>Rate</h4>
+                    <p>{rate}</p>
+                    <h5>{unit}</h5>
+                </td>
+            )
+        } else {
+            return (
+                <td>
+                    <h4>Rate</h4>
+                    <p>{rate}</p>
+                    <h5>{unit}</h5>
+                </td>
+            )
+        }
     }
 
     getDrugCards() {
@@ -24,10 +70,7 @@ class TopHeader extends Component {
         for (var i = 0; i < data.length; i++) {
             modalName = "DrugModal" + { i }
             arr.push(
-                // < TestModal3
-                //     key={i}
-                //     drugName={data[i]["Drug Name"]} />)
-                modalName = ({ data, onClickNext, step, ...rest }) => (
+                modalName = ({ data, verified, onClickNext, onClickBack, step, ...rest }) => (
                     < Modal centered {...rest} >
                         <Modal.Header closeButton>
                             <div className="drugColor" style={{ backgroundColor: "#" + data[step]["Drug Color Code"] }}>
@@ -36,23 +79,39 @@ class TopHeader extends Component {
 
                         </Modal.Header>
                         <Modal.Body>
-                            <div>
-                                Drug Location: {data[step]["Brain"]}{data[step]["Pump"]}
-                            </div>
+                            <Table borderless>
+                                <tbody>
+                                    <tr>
+                                        {this.getDosage(data[step]["Dosage"], data[step]["Dosage Rate"])}
 
-                            <div>
-                                VTBI: {data[step]["VTBI"]}{data[step]["VTBI Unit"]}
-                            </div>
+                                        {this.getDilution(data[step]["Dilution"], data[step]["Dilution Rate"])}
 
-                            <div>
-                                Vol Left: {data[step]["Starting Volume"]}{data[step]["Starting Volume Unit"]}
-                            </div>
+                                    </tr>
+                                    <tr>
+                                        {this.getRate(data[step]["Dilution"], data[step]["Rate"], data[step]["Rate Unit"])}
+                                        <td>
+                                            <h4>VTBI</h4>
+                                            <p>{data[step]["VTBI"]}</p>
+                                            <h5>{data[step]["VTBI Unit"]}</h5>
+                                        </td>
 
-                            <div>
-                                Time Remaining: {data[step]["Starting Volume"]}
-                            </div>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Time Remaining</h4>
+                                            <p>{data[step]["Starting Volume"]} min</p>
+                                        </td>
+                                        <td>
+                                            <h4>Location</h4>
+                                            <p>{data[step]["Brain"]}{data[step]["Pump"]}</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </Table>
                         </Modal.Body>
                         <Modal.Footer>
+                            <Button variant="secondary" onClick={onClickNext}>Previous</Button>
+
                             <Button variant="success" onClick={onClickNext}>Verify</Button>
                         </Modal.Footer>
                     </Modal >
@@ -65,6 +124,7 @@ class TopHeader extends Component {
 
     render() {
         let modalList = this.getDrugCards();
+        const buttonText = this.state.visible ? <strong>Reset</strong> : <strong>Handoff Mode</strong>;
 
         return (
             <div className='topHeader'>
@@ -92,7 +152,7 @@ class TopHeader extends Component {
 
                 <Button
                     variant="light"
-                    onClick={() => { this.setState({ visible: !this.state.visible }); }}><strong>Handoff Mode</strong>
+                    onClick={() => { this.setState({ visible: !this.state.visible }) }}>{buttonText}
                 </Button>
 
             </div>
