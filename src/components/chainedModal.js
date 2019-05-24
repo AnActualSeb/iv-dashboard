@@ -7,12 +7,13 @@ import ModalBackdrop from '../components/ModalBackdrop';
 class ChainedModals extends Component {
     state = {
         currIndex: 0,
-        showModal: true
+        showModal: true,
+        verified: false
     };
 
     render() {
         const { modalList } = this.props;
-        const { currIndex, showModal } = this.state;
+        const { currIndex, showModal, verified } = this.state;
         const ModalComponent = modalList[currIndex];
 
         return (
@@ -22,10 +23,12 @@ class ChainedModals extends Component {
                 <ModalComponent
                     step={currIndex}
                     onClickNext={this._handleClickNext}
+                    onClickBack={this._handleClickBack}
                     backdrop={false}
                     show={showModal}
                     onHide={this._handleModalHide}
                     data={data}
+                    verified={verified}
                 />
             </div>
         );
@@ -36,9 +39,19 @@ class ChainedModals extends Component {
         const { currIndex } = this.state;
 
         if (currIndex < modalList.length - 1) {
-            this.setState({ currIndex: currIndex + 1 });
+            this.setState({ currIndex: currIndex + 1, verified: true });
         } else {
-            this.setState({ showModal: false });
+            this.setState({ showModal: false, verified: true });
+        }
+    };
+
+    _handleClickBack = () => {
+        const { currIndex } = this.state;
+
+        if (currIndex < 1) {
+            this.setState({ showModal: false, verified: false });
+        } else {
+            this.setState({ currIndex: currIndex - 1, verified: false });
         }
     };
 

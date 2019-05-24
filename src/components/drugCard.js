@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap/Button";
+import Validated from "../images/verifiedCheck.png";
 import "../styles/drugCard.css";
 
 // still needs to respond to specific drug information
@@ -24,10 +25,17 @@ class DrugCard extends Component {
         }
     }
 
+    // verifiedCheck() {
+    // }
+
     render() {
         return (
+            //Uncomment Image to include verified checkmark after handoff mode
             <div className='cardContainer'>
                 <Card style={{ width: '15rem', height: '11rem' }}>
+
+                    {/* <img src={Validated} alt="Validated Checkmark" /> */}
+
                     <Card.Title style={{ backgroundColor: "#" + this.props.color }}>
                         <p>{this.props.drugName}</p>
                     </Card.Title>
