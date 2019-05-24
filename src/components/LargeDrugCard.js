@@ -13,16 +13,12 @@ class Popup extends Component {
     }
 
     render() {
-
-
         return (
-
             <Modal
                 {...this.props}
                 size="md"
                 aria-labelledby="contained-modal-title-vcenter"
-                centered
-            >
+                centered>
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
                         {this.props.drugName}
@@ -32,14 +28,10 @@ class Popup extends Component {
                     {this.state.drugList[this.state.index]}
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.props.onHide}>Previous</Button>
-
                         <Button variant="success">Verify</Button>
-
-                        {/* <Button variant="success" onClick={this.increment()}>Verify</Button> */}
                     </Modal.Footer>
                 </Modal.Body>
-
-            </Modal >
+            </Modal>
         );
     }
 }

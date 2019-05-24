@@ -2,10 +2,10 @@
    and simulate the passing of time and decrease the initial volume of a drug based on
    the infusion rate (defined by sequential values in drugData.json)*/
 
-// Current State: 
-// Future State:
+
 
 import React, { Component } from "react";
+import data from "../data/VTBIData.json"
 
 class Timer extends Component {
   constructor(props) {

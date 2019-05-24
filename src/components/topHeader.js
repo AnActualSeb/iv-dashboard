@@ -4,6 +4,7 @@ import ChainedModal from "./chainedModal";
 import data from "../data/drugData.json";
 import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
+import {Route, Switch, Link} from "react-router-dom";
 import '../styles/topHeader.css';
 
 class TopHeader extends Component {
@@ -154,8 +155,6 @@ class TopHeader extends Component {
                     variant="light"
                     onClick={() => { this.setState({ visible: !this.state.visible }) }}>{buttonText}
                 </Button>
-
-                <Route path="/handoff" component={Handoff} />
             </div>
         );
     }

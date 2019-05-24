@@ -25,13 +25,15 @@ class DrugCard extends Component {
         }
     }
 
-    // verifiedCheck() {
-    // }
+    handleCardClick() {
+        // console.log("in handleCardClick")
+        
+    }
 
     render() {
         return (
             //Uncomment Image to include verified checkmark after handoff mode
-            <div className='cardContainer'>
+            <div className='cardContainer' onClick={this.handleCardClick}>
                 <Card style={{ width: '15rem', height: '11rem' }}>
 
                     {/* <img src={Validated} alt="Validated Checkmark" /> */}
