@@ -112,19 +112,19 @@ td > h5 {
     margin-top: -3px;
 }
 
-.dosage > h5{
+.modalDosage > h5{
     font-weight: bold;
 }
 
-.dosage > p{
+.modalDosage > p{
     font-weight: bold;
 }
 
-.rate > h5{
+.modalRate > h5{
     font-weight: bold;
 }
 
-.rate > p{
+.modalRate > p{
     font-weight: bold;
 }
 
