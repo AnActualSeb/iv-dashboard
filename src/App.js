@@ -14,7 +14,6 @@ function App() {
         <Switch>
           {/* <Route exact path="/" component={Dashboard} /> */}
           {/* <Route path="/handoff" component={Handoff} /> */}
-
           <Route exact path="/" render={props => <Timer startVolume="150" unit="mL" />} />
         </Switch>
       </BrowserRouter>
