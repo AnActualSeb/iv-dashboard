@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import ChainedModal from "./chainedModal";
-import data from "../data/drugData.json";
+import data from "../data/VTBIData.json";
 import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
+import Timer from "../components/Timer"
+import {Route, Switch, Link} from "react-router-dom";
 import '../styles/topHeader.css';
 
 class TopHeader extends Component {
@@ -71,7 +73,7 @@ class TopHeader extends Component {
             modalName = "DrugModal" + { i }
             arr.push(
                 modalName = ({ data, verified, onClickNext, onClickBack, step, ...rest }) => (
-                    < Modal centered {...rest} >
+                    <Modal centered {...rest} >
                         <Modal.Header closeButton>
                             <div className="drugColor" style={{ backgroundColor: "#" + data[step]["Drug Color Code"] }}>
                                 <strong>{data[step]["Drug Name"]}</strong>
@@ -91,8 +93,7 @@ class TopHeader extends Component {
                                         {this.getRate(data[step]["Dilution"], data[step]["Rate"], data[step]["Rate Unit"])}
                                         <td>
                                             <h4>VTBI</h4>
-                                            <p>{data[step]["VTBI"]}</p>
-                                            <h5>{data[step]["VTBI Unit"]}</h5>
+                                            <Timer startVolume={data[step]["VTBI 0 0sec"]} volumeUnit={data[step]["VTBI Unit"]} rateCalc={data[step]["Rate"]} />
                                         </td>
 
                                     </tr>
@@ -133,17 +134,17 @@ class TopHeader extends Component {
                     <p> Scott, Michael</p>
                 </div>
 
-                <div className='mrn'>
+                <div className="mrn">
                     <strong>MRN:</strong>
                     <p> 176398</p>
                 </div>
 
-                <div className='weight'>
+                <div className="weight">
                     <strong>Weight:</strong>
                     <p> 13.5kg</p>
                 </div>
 
-                <div className='mode'>
+                <div className="mode">
                     <strong>Mode:</strong>
                     <p>AN</p>
                 </div>
@@ -154,7 +155,6 @@ class TopHeader extends Component {
                     variant="light"
                     onClick={() => { this.setState({ visible: !this.state.visible }) }}>{buttonText}
                 </Button>
-
             </div>
         );
     }
