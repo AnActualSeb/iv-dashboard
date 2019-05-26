@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
 import Timer from "./components/Timer";
 
@@ -9,11 +9,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <div>
+        <Switch>
           <Route exact path="/" component={Dashboard} />
-
-          {/* <Route exact path="/" render={props => <Timer startVolume="100" />} /> */}
-        </div>
+          {/* <Route exact path="/" render={props => <Timer startVolume="150" unit="mL" />} /> */}
+        </Switch>
       </BrowserRouter>
     </div>
   );

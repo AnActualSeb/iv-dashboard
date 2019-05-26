@@ -43,6 +43,7 @@ class DrugCard extends Component {
     }
 
     getAlarm(alarmType) {
+
         if (alarmType === "occlusion") {
             this.setState({ backgroundColor: "#FFBBBB", border: "solid 4px red", status: "Occlusion", statusColor: "none", statusBorder: "none" })
         } else if (alarmType === "nearEnd") {

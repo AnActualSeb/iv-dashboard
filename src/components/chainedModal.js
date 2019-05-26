@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import data from "../data/drugData.json";
+import data from "../data/VTBIData.json";
 
 import ModalBackdrop from '../components/ModalBackdrop';
 
