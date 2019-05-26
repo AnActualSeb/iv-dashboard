@@ -19,7 +19,7 @@ class TopHeader extends Component {
     getDosage(value, unit) {
         if (value !== null) {
             return (
-                <td className="dosage">
+                <td className="modalDosage">
                     <h4>Dosage</h4>
                     <p>{value}</p>
                     <h5>{unit}</h5>
@@ -47,7 +47,7 @@ class TopHeader extends Component {
     getRate(dosage, rate, unit) {
         if (dosage === null) {
             return (
-                <td className="rate">
+                <td className="modalRate">
                     <h4>Rate</h4>
                     <p>{rate}</p>
                     <h5>{unit}</h5>
@@ -110,7 +110,7 @@ class TopHeader extends Component {
                             </Table>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={onClickNext}>Previous</Button>
+                            <Button variant="secondary" onClick={onClickBack}>Previous</Button>
 
                             <Button variant="success" onClick={onClickNext}>Verify</Button>
                         </Modal.Footer>

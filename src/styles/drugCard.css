@@ -101,3 +101,11 @@ p {
     right: 0;
     top: 0;
 }
+
+.guardrailAlarm {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 15px;
+    margin-bottom: 8px;
+}
