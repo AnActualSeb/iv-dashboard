@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap/Button";
 import Validated from "../images/verifiedCheck.png";
+import Guardrail from "../images/GuardRail.png";
 import "../styles/drugCard.css";
 
 //still needs to reaspond to specific drug information
@@ -25,8 +26,13 @@ class DrugCard extends Component {
         }
     }
 
-    // verifiedCheck() {
-    // }
+    guardrail(drugName) {
+        if (drugName === "Morphine") {
+            return (
+                <img style={{ height: "30px", width: "25px;" }} src={Guardrail} alt="guardrail indicator" />
+            )
+        }
+    }
 
     render() {
         return (
@@ -63,6 +69,11 @@ class DrugCard extends Component {
                                 </h5>
                             </div>
                         </div>
+
+                        <div className="guardrailAlarm">
+                            {this.guardrail(this.props.drugName)}
+                        </div>
+
 
                         <div className='status'>Active</div>
                     </Card.Body>
