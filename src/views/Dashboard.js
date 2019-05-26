@@ -3,6 +3,7 @@ import DrugCard from "../components/drugCard";
 import "../styles/dashboard.css";
 import data from "../data/drugData.json";
 import pumpBrain from '../images/pumpBrain.png';
+import lowBattery from '../images/lowBattery.png';
 import TopHeader from "../components/TopHeader.js";
 
 class Dashboard extends Component {
@@ -28,10 +29,12 @@ class Dashboard extends Component {
                     startingVolumeUnit={data[i]["Starting Volume Unit"]}
                     vtbi={data[i]["VTBI"]}
                     vtbiUnit={data[i]["VTBI Unit"]}
-                    method={data[i]["Method"]} />)
+                    method={data[i]["Method"]}
+                    alarm="occlusion" />)
             if ((counter % 4) === 0) {
                 arr.push(<img className='pumpBrain' src={pumpBrain} alt="Pump Brain" key={counter2} />)
                 counter2++;
+                console.log(counter2)
             }
         }
         return arr;

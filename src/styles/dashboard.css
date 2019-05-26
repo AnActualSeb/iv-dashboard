@@ -6,5 +6,13 @@
 
 .pumpBrain {
     height: 9rem;
-    margin-top: 21px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lowBattery {
+    width: 21px;
+    /* height: 5rem; */
+    margin-top: 65px;
+    margin-bottom: auto;
 }

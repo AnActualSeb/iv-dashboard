@@ -4,11 +4,19 @@ import Button from "react-bootstrap/Button";
 import Validated from "../images/verifiedCheck.png";
 import Guardrail from "../images/GuardRail.png";
 import "../styles/drugCard.css";
+import { isUserWhitespacable } from '@babel/types';
 
 //still needs to reaspond to specific drug information
 //Whole div is link, it should just be the drug card alone
 
 class DrugCard extends Component {
+    state = {
+        backgroundColor: "#ffffff",
+        border: "solid 4px green",
+        status: "Active",
+        statusColor: "#82d681",
+        statusBorder: "1px solid green"
+    }
 
     getDosage() {
         if (this.props.dosage !== null) {
@@ -34,11 +42,22 @@ class DrugCard extends Component {
         }
     }
 
+    getAlarm(alarmType) {
+        if (alarmType === "occlusion") {
+            this.setState({ backgroundColor: "#FFBBBB", border: "solid 4px red", status: "Occlusion", statusColor: "none", statusBorder: "none" })
+        } else if (alarmType === "nearEnd") {
+            this.setState({ backgroundColor: "#FEF59F", border: "solid 4px yellow", status: "Near End", statusColor: "none", statusBorder: "none" })
+        } else if (alarmType === "paused") {
+            this.setState({ statusColor: "#F8EE13", status: "Paused", statusBorder: "#F8EE13" })
+        }
+
+    }
+
     render() {
         return (
             //Uncomment Image to include verified checkmark after handoff mode
             <div className='cardContainer'>
-                <Card style={{ width: '15rem', height: '11rem' }}>
+                <Card style={{ width: '15rem', height: '11rem', backgroundColor: this.state.backgroundColor, border: this.state.border }}>
 
                     {/* <img src={Validated} alt="Validated Checkmark" /> */}
 
@@ -75,7 +94,7 @@ class DrugCard extends Component {
                         </div>
 
 
-                        <div className='status'>Active</div>
+                        <div className='status' style={{ background: this.state.statusColor, border: this.state.statusBorder }}>{this.state.status}</div>
                     </Card.Body>
                 </Card>
             </div>

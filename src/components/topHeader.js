@@ -4,7 +4,7 @@ import ChainedModal from "./chainedModal";
 import data from "../data/drugData.json";
 import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
-import '../styles/topHeader.css';
+import '../styles/TopHeader.css';
 
 class TopHeader extends Component {
     constructor(props) {
