@@ -1,9 +1,9 @@
-/* This component is a "countdown" timer that will receive values from drugData.json
+/* This component is a "countdown" timer that will receive values from VTBIData.json
    and simulate the passing of time and decrease the initial volume of a drug based on
-   the infusion rate (defined by sequential values in drugData.json)*/
+   the infusion rate (defined by sequential values in VTBIData.json)*/
 
 
-
+//Timer< startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate}>
 import React, { Component } from "react";
 import data from "../data/VTBIData.json"
 
@@ -27,7 +27,7 @@ class Timer extends Component {
   }
 
   componentDidMount() {
-    const { startVolume, volumeUnit } = this.props;
+    const { startVolume, volumeUnit, rateCalc } = this.props;
     this.setState({
       volume: startVolume,
       unit: volumeUnit
@@ -35,12 +35,12 @@ class Timer extends Component {
     this.myInterval = setInterval(() => {
       if (this.state.volume > 0) {
         this.setState(prevState => ({
-          volume: prevState.volume - 1
+          volume: Math.round(prevState.volume - (0.25946666*rateCalc), 2)
         }));
       } else {
         clearInterval(this.myInterval);
       }
-    }, 1500);
+    }, 1000);
   }
 
   componentWillUnmount() {
