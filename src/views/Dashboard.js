@@ -6,7 +6,6 @@ import pumpBrain from '../images/pumpBrain.png';
 import TopHeader from "../components/topHeader.js";
 
 class Dashboard extends Component {
-
   state = {}
 
   makeCards() {

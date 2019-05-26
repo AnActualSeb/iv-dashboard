@@ -33,9 +33,9 @@ class Timer extends Component {
       unit: volumeUnit
     });
     this.myInterval = setInterval(() => {
-      if (this.state.volume > 0) {
+      if (this.state.volume > 0.0) {
         this.setState(prevState => ({
-          volume: Math.round(prevState.volume - (0.25946666*rateCalc), 2)
+          volume: (prevState.volume - (0.25946666*rateCalc)).toFixed(3)
         }));
       } else {
         clearInterval(this.myInterval);

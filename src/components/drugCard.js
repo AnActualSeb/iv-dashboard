@@ -12,7 +12,10 @@ import "../styles/drugCard.css";
 // whole div is link, it should just be the drug card alone
 
 class DrugCard extends Component {
-    state = {show: false};
+    state = {
+        show: false,
+        currentVTBI: this.props.vtbi
+    };
     
     handleShow = () => {
         this.setState({show:true})
@@ -120,7 +123,6 @@ class DrugCard extends Component {
                                 </h5>
                             </div>
                         </div>
-
                         <div className='status'>Active</div>
                     </Card.Body>
                 </Card>
