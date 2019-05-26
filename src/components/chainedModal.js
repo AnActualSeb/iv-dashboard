@@ -39,9 +39,9 @@ class ChainedModals extends Component {
         const { currIndex } = this.state;
 
         if (currIndex < modalList.length - 1) {
-            this.setState({ currIndex: currIndex + 1, verified: true });
+            this.setState({ currIndex: currIndex + 1 });
         } else {
-            this.setState({ showModal: false, verified: true });
+            this.setState({ showModal: false });
         }
     };
 
@@ -49,9 +49,9 @@ class ChainedModals extends Component {
         const { currIndex } = this.state;
 
         if (currIndex < 1) {
-            this.setState({ showModal: false, verified: false });
+            this.setState({ showModal: false });
         } else {
-            this.setState({ currIndex: currIndex - 1, verified: false });
+            this.setState({ currIndex: currIndex - 1 });
         }
     };
 

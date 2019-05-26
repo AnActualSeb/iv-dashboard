@@ -1,0 +1,69 @@
+.modal-header > button.close{
+    padding: 10px 16px 0px 0px;
+    margin: 0px;
+    position: absolute;
+    right: 0;
+}
+
+.modal-header {
+    padding: 0px 0px 0px 0px;
+    border: none;
+}
+
+.modal-body{
+    table-layout: auto;
+}
+
+.drugColor{
+    width: 75%;
+    height: 50px;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0px 0px 10px 10px;
+    border: solid 1px black;
+    border-top: none;
+    margin: auto;
+    font-size: 30px;
+}
+
+td {
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+
+td > h4{
+    font-size: 18px;
+}
+
+td > p {
+    font-size: 30px;
+    margin-top: -5px;
+}
+
+td > h5 {
+    font-size: 15px;
+    margin-top: -3px;
+}
+
+.modalDosage > h5{
+    font-weight: bold;
+}
+
+.modalDosage > p{
+    font-weight: bold;
+}
+
+.modalRate > h5{
+    font-weight: bold;
+}
+
+.modalRate > p{
+    font-weight: bold;
+}
+
+.modal-footer{
+    justify-content: space-between;
+    border: none;
+}

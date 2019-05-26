@@ -6,6 +6,7 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Validated from "../images/verifiedCheck.png";
 import Timer from "../components/Timer";
+import Guardrail from "../images/GuardRail.png";
 import "../styles/drugCard.css";
 
 // still needs to respond to specific drug information
@@ -38,6 +39,14 @@ class DrugCard extends Component {
             return <strong>{this.props.rate}</strong>
         } else {
             return <p>{this.props.rate}</p>
+        }
+    }
+
+    guardrail(drugName) {
+        if (drugName === "Morphine") {
+            return (
+                <img style={{ height: "30px", width: "25px;" }} src={Guardrail} alt="guardrail indicator" />
+            )
         }
     }
 
@@ -123,6 +132,12 @@ class DrugCard extends Component {
                                 </h5>
                             </div>
                         </div>
+
+                        <div className="guardrailAlarm">
+                            {this.guardrail(this.props.drugName)}
+                        </div>
+
+
                         <div className='status'>Active</div>
                     </Card.Body>
                 </Card>
