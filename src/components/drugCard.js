@@ -83,7 +83,6 @@ class DrugCard extends Component {
                                         <h5>{this.props.rateUnit}</h5>
                                     </td>
                                     <td>
-                                        {/* This will become a timer component that will decrement over time */}
                                         <h4>VTBI</h4>
                                         <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate}/>
                                     </td>
@@ -111,10 +110,7 @@ class DrugCard extends Component {
 
                             <div className='vtbi'>
                                 <p>VTBI</p>
-                                {this.props.vtbi}
-                                <h5>
-                                    {this.props.vtbiUnit}
-                                </h5>
+                                <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate}/>
                             </div>
 
                             <div className='rate'>

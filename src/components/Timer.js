@@ -21,7 +21,7 @@ class Timer extends Component {
     const { volume, unit } = this.state;
     return (
       <div>
-        <p>Current Volume: {volume} {unit}</p>
+        <p>{volume} {unit}</p>
       </div>
     );
   }
