@@ -5,9 +5,9 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Validated from "../images/verifiedCheck.png";
 import Guardrail from "../images/GuardRail.png";
-import Timer from "../components/Timer";
+import Timer from "./Timer";
 import data from "../data/VTBIData.json";
-import "../styles/drugCard.css";
+import "../styles/DrugCard.css";
 
 
 let date = new Date();
