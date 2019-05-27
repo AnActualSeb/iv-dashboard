@@ -5,7 +5,7 @@ import data from "../data/VTBIData.json";
 import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
 import Timer from "../components/Timer"
-import {Route, Switch, Link} from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import '../styles/topHeader.css';
 
 class TopHeader extends Component {
