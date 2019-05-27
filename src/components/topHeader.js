@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
 import Timer from "../components/Timer"
 import { Route, Switch, Link } from "react-router-dom";
-import '../styles/topHeader.css';
+import '../styles/TopHeader.css';
 
 class TopHeader extends Component {
     constructor(props) {
@@ -71,6 +71,7 @@ class TopHeader extends Component {
         let modalName;
         for (var i = 0; i < data.length; i++) {
             modalName = "DrugModal" + { i }
+            console.log(data[i]["Drug Name"])
             arr.push(
                 modalName = ({ data, verified, onClickNext, onClickBack, step, ...rest }) => (
                     <Modal centered {...rest} >
@@ -93,7 +94,9 @@ class TopHeader extends Component {
                                         {this.getRate(data[step]["Dilution"], data[step]["Rate"], data[step]["Rate Unit"])}
                                         <td>
                                             <h4>VTBI</h4>
-                                            <Timer startVolume={data[step]["VTBI 0 0sec"]} volumeUnit={data[step]["VTBI Unit"]} rateCalc={data[step]["Rate"]} />
+                                            {/* <Timer startVolume={data[step]["VTBI 0 0sec"]} volumeUnit={data[step]["VTBI Unit"]} rateCalc={data[step]["Rate"]} /> */}
+                                            <p>{data[step]["VTBI 10 100 sec"].toFixed(2)}</p>
+                                            <h5>{data[step]["VTBI Unit"]}</h5>
                                         </td>
 
                                     </tr>
