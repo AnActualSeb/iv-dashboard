@@ -32,14 +32,15 @@ class Timer extends Component {
       // making sure that we don't hit negative values
       if (this.state.volume - (0.25946666 * rateCalc) > 0.0) {
         this.setState(prevState => ({
-          volume: (prevState.volume - (0.25946666 * rateCalc)).toFixed(3)
+          volume: (prevState.volume - (0.25946666 * rateCalc)).toFixed(2)
+
         }));
       } else {
         // to ensure that all IV pump channels hit 0
         this.setState({ volume: 0.000 })
         clearInterval(this.myInterval);
       }
-    }, 1000);
+    }, 5000);
   }
 
   componentWillUnmount() {

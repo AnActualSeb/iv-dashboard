@@ -18,7 +18,7 @@
 }
 
 .card {
-    border: solid 4px green;
+    /* border: solid 4px green; */
     margin: 5px;
     display: flex;
     box-shadow: 3px 3px #cfcdcd;
@@ -32,8 +32,8 @@
 }
 
 .status{
-    border: 1px solid green;
-    background: rgb(130, 214, 130);
+    /* border: 1px solid green;
+    background: rgb(130, 214, 130); */
     border-radius: 15px;
     width: 120px;
     position: absolute;
