@@ -17,13 +17,13 @@ class DrugCard extends Component {
         show: false,
         currentVTBI: this.props.vtbi
     };
-    
+
     handleShow = () => {
-        this.setState({show:true})
+        this.setState({ show: true })
     }
 
     handleClose = () => {
-        this.setState({show:false})
+        this.setState({ show: false })
     }
 
     getDosage() {
@@ -54,7 +54,7 @@ class DrugCard extends Component {
         return (
             //Uncomment Image to include verified checkmark after handoff mode
             <>
-            <Modal show={this.state.show} onHide={this.handleClose}>
+                <Modal show={this.state.show} onHide={this.handleClose}>
                     <Modal.Header closeButton>
                         <div className="drugColor" style={{ backgroundColor: "#" + this.props.drugColor }}>
                             <strong>{this.props.drugName}</strong>
@@ -70,10 +70,10 @@ class DrugCard extends Component {
                                                 <h4>Dosage</h4>
                                                 <p><strong>{this.props.dosage}</strong></p>
                                                 <h5>{this.props.dosageUnit}</h5>
-                                            </> 
+                                            </>
                                         ) : (
-                                            <></>
-                                        )}
+                                                <></>
+                                            )}
                                     </td>
                                     <td>
                                         {this.props.dilution !== null ? (
@@ -83,9 +83,9 @@ class DrugCard extends Component {
                                                 <h5>{this.props.dilutionRate}</h5>
                                             </>
                                         ) : (
-                                            <></>
-                                        )}
-                                        
+                                                <></>
+                                            )}
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -96,52 +96,52 @@ class DrugCard extends Component {
                                     </td>
                                     <td>
                                         <h4>VTBI</h4>
-                                        <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate}/>
+                                        <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate} />
                                     </td>
                                 </tr>
                             </tbody>
                         </Table>
                     </Modal.Body>
-            </Modal>
-            <div className='cardContainer' onClick={this.handleShow}>
-                <Card style={{ width: '15rem', height: '11rem' }}>
+                </Modal>
+                <div className='cardContainer' onClick={this.handleShow}>
+                    <Card style={{ width: '15rem', height: '11rem' }}>
 
-                    {/* <img src={Validated} alt="Validated Checkmark" /> */}
+                        {/* <img src={Validated} alt="Validated Checkmark" /> */}
 
-                    <Card.Title style={{ backgroundColor: "#" + this.props.color }}>
-                        <p>{this.props.drugName}</p>
-                    </Card.Title>
-                    <Card.Body>
-                        <div className='info'>
-                            <div className='dosage'>
-                                {this.getDosage()}
-                                <h5>
-                                    {this.props.dosageUnit}
-                                </h5>
+                        <Card.Title style={{ backgroundColor: "#" + this.props.color }}>
+                            <p>{this.props.drugName}</p>
+                        </Card.Title>
+                        <Card.Body>
+                            <div className='info'>
+                                <div className='dosage'>
+                                    {this.getDosage()}
+                                    <h5>
+                                        {this.props.dosageUnit}
+                                    </h5>
+                                </div>
+
+                                <div className='vtbi'>
+                                    <p>VTBI</p>
+                                    <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate} />
+                                </div>
+
+                                <div className='rate'>
+                                    {this.getRate()}
+                                    <h5>
+                                        {this.props.rateUnit}
+                                    </h5>
+                                </div>
                             </div>
 
-                            <div className='vtbi'>
-                                <p>VTBI</p>
-                                <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate}/>
+                            <div className="guardrailAlarm">
+                                {this.guardrail(this.props.drugName)}
                             </div>
 
-                            <div className='rate'>
-                                {this.getRate()}
-                                <h5>
-                                    {this.props.rateUnit}
-                                </h5>
-                            </div>
-                        </div>
 
-                        <div className="guardrailAlarm">
-                            {this.guardrail(this.props.drugName)}
-                        </div>
-
-
-                        <div className='status'>Active</div>
-                    </Card.Body>
-                </Card>
-            </div>
+                            <div className='status'>Active</div>
+                        </Card.Body>
+                    </Card>
+                </div>
             </>
         );
     }
