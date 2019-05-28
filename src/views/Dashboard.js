@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import DrugCard from "../components/drugCard";
-import "../styles/dashboard.css";
+import DrugCard from "../components/DrugCard";
+import "../styles/Dashboard.css";
 import data from "../data/VTBIData.json"
 import pumpBrain from '../images/pumpBrain.png';
 import lowBattery from '../images/lowBattery.png';

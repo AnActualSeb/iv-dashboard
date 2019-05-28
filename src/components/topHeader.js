@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
-import ChainedModal from "./chainedModal";
+import ChainedModal from "./ChainedModal";
 import data from "../data/VTBIData.json";
 import hourData from "../data/HoursLeftData.json"
 import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
-import Timer from "./VolumeDecrementer"
+import VolumeDecrementer from "./VolumeDecrementer"
 import { Route, Switch, Link } from "react-router-dom";
 import '../styles/TopHeader.css';
 
