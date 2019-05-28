@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
-import Timer from "./components/Timer";
+import Timer from "./components/VolumeDecrementer";
 
 import "./App.css";
 

@@ -5,9 +5,9 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Validated from "../images/verifiedCheck.png";
 import Guardrail from "../images/GuardRail.png";
-import Timer from "../components/Timer";
+import Timer from "./VolumeDecrementer";
 import data from "../data/VTBIData.json";
-import "../styles/drugCard.css";
+import "../styles/DrugCard.css";
 
 
 let date = new Date();
@@ -149,6 +149,19 @@ class DrugCard extends Component {
                                         <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate} />
                                     </td>
                                 </tr>
+                                {this.props.drugName === "Milrinone" ? (
+                                    <>
+                                        <tr>
+                                            <td>
+                                                <h4>Time Remaining</h4>
+                                                <p>11h 42min</p>
+                                            </td>
+                                        </tr>
+                                    </>
+                                ) : (
+                                        <>
+                                        </>
+                                    )}
                             </tbody>
                         </Table>
                     </Modal.Body>
