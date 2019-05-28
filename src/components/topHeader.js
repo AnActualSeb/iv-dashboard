@@ -95,7 +95,7 @@ class TopHeader extends Component {
                                         {this.getRate(data[step]["Dilution"], data[step]["Rate"], data[step]["Rate Unit"])}
                                         <td>
                                             <h4>VTBI</h4>
-                                            <Timer startVolume={data[step]["VTBI 0 0sec"]} volumeUnit={data[step]["VTBI Unit"]} rateCalc={data[step]["Rate"]} />
+                                            <VolumeDecrementer startVolume={data[step]["VTBI 0 0sec"]} volumeUnit={data[step]["VTBI Unit"]} rateCalc={data[step]["Rate"]} />
                                             {/* <p>{(data[step]["VTBI 10 100 sec"]).toFixed(2)}</p> */}
                                             <h5>{data[step]["VTBI Unit"]}</h5>
                                         </td>
