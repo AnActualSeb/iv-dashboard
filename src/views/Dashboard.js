@@ -4,7 +4,7 @@ import "../styles/dashboard.css";
 import data from "../data/VTBIData.json"
 import pumpBrain from '../images/pumpBrain.png';
 import lowBattery from '../images/lowBattery.png';
-import TopHeader from "../components/TopHeader.js";
+import TopHeader from "../components/topHeader.js";
 
 class Dashboard extends Component {
     makeCards() {

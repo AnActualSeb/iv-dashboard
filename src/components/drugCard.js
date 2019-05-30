@@ -57,30 +57,30 @@ class DrugCard extends Component {
         }
     }
 
-    // isPaused() {
-    //     if (this.props.drugName === "Dexmedetomidine") {
-    //         return (
-    //             <div className='vtbi'>
-    //                 <p>VTBI</p>
-    //                 24.59
-    //                 <h5>{this.props.vtbiUnit}</h5>
-    //             </div>
-    //         )
-    //     } else {
-    //         return (
-    //             <div className='vtbi'>
-    //                 <p>VTBI</p>
-    //                 <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate} />
-    //             </div>
-    //         )
-    //     }
-    // }
+    isPaused() {
+        if (this.props.drugName === "Dexmedetomidine") {
+            return (
+                <div className='vtbi'>
+                    <p>VTBI</p>
+                    25.7
+                    <h5>{this.props.vtbiUnit}</h5>
+                </div>
+            )
+        } else {
+            return (
+                <div className='vtbi'>
+                    <p>VTBI</p>
+                    <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate} />
+                </div>
+            )
+        }
+    }
 
     getAlarm(alarmType) {
         if (alarmType === "occlusion") {
             this.setState({ backgroundColor: "#FFBBBB", border: "solid 4px red", status: "Occlusion", statusColor: "#FFBBBB", statusBorder: "solid 1px red", hasRun: true })
         } else if (alarmType === "nearEnd") {
-            this.setState({ backgroundColor: "#FEF59F", border: "solid 4px #FFC046", status: "Near End", statusColor: "#FEF59F", statusBorder: "solid 1px #FFC046", hasRun: true })
+            this.setState({ border: "solid 4px #FFC046", status: "Near End", statusColor: "#FEF59F", statusBorder: "solid 1px #FFC046", hasRun: true })
         } else if (alarmType === "paused") {
             this.setState({ statusColor: "#FEF59F", border: "solid 4px #FFC046", status: "Paused", statusBorder: "solid 1px #FFC046", paused: true, hasRun: true })
         } else if (alarmType === "empty") {
@@ -91,7 +91,7 @@ class DrugCard extends Component {
 
     render() {
         // if (this.props.drugName === "Tranexamic Acid" & this.state.hasRun === false) {
-        //     this.getAlarm("nearEnd")
+        //     this.getAlarm("empty")
         // }
 
         // if (this.props.drugName === "EPINEPHrine" & this.state.hasRun === false) {
@@ -173,10 +173,12 @@ class DrugCard extends Component {
                                     </h5>
                                 </div>
 
-                                <div className='vtbi'>
+                                {/* <div className='vtbi'>
                                     <p>VTBI</p>
                                     <Timer startVolume={this.props.vtbi} volumeUnit={this.props.vtbiUnit} rateCalc={this.props.rate} />
-                                </div>
+                                </div> */}
+
+                                {this.isPaused()}
 
                                 <div className='rate'>
                                     {this.getRate()}
