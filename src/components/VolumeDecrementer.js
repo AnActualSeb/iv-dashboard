@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import data from "../data/VTBIData.json"
 
-class Timer extends Component {
+class VolumeDecrementer extends Component {
   constructor(props) {
     super(props);
     // setting initial state as a default volume value for a drug
@@ -48,4 +48,4 @@ class Timer extends Component {
   }
 }
 
-export default Timer;
+export default VolumeDecrementer;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import data from "../data/VTBIData.json";
 
-import ModalBackdrop from '../components/ModalBackdrop';
+import ModalBackdrop from './ModalBackdrop';
 
 //remove handoffData references
 
