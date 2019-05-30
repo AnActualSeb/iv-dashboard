@@ -154,7 +154,6 @@ class DrugCard extends Component {
                     </Modal.Body>
                 </Modal>
 
-
                 <div className='cardContainer' onClick={this.handleShow}>
                     <Card style={{ width: '15rem', height: '11rem', backgroundColor: this.state.backgroundColor, border: this.state.border }}>
 
@@ -192,8 +191,8 @@ class DrugCard extends Component {
                                 {this.guardrail(this.props.drugName)}
                             </div>
 
-
                             <div className='status' style={{ background: this.state.statusColor, border: this.state.statusBorder }}>{this.state.status}</div>
+
                         </Card.Body>
                     </Card>
                 </div>
