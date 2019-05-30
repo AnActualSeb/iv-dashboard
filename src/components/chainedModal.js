@@ -3,6 +3,7 @@ import data from "../data/VTBIData.json";
 
 import ModalBackdrop from './ModalBackdrop';
 
+//remove handoffData references
 
 class ChainedModals extends Component {
     state = {
